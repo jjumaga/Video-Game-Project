@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap');
 
 html {
     box-sizing: border-box;
@@ -8,24 +13,26 @@ html {
 
 #index {
     font-family: "Chicle";
-    background: linear-gradient(-45deg, #d16425, #e2772f, #da8536, #db8331);
+    background: linear-gradient(-45deg, #b14e0c, #d46e2a, #c26f39, #db915f);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-}
-
-#game-page-1 {
     display: flex;
     justify-content: center;
+
 }
 
 #game-box-1 {
-    background: linear-gradient(-45deg, #db8331, #da8536, #e2772f, #d16425);
+    background: linear-gradient(-45deg, #db915f, #af7046, #d46e2a, #b14e0c);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    width: 80vw;
-    height: 90vh;
+    width: 70vw;
+    height: 80vh;
     position: relative;
     margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     
 }
 
@@ -45,6 +52,8 @@ html {
     display: flex;
     justify-content: center;
     font-size: 35px;
+    position: relative;
+    z-index: 1;
 }
 #game-name {
     margin-bottom: 30px;
@@ -55,19 +64,28 @@ html {
     text-align: end;
     padding:0;
     position: relative;
+    z-index: 2;
 
 }
 
 #nico {
     width: 30vw;
     height: 60vh;
-    
+}
+
+.game-link {
+    height: 10vh;
+    width: 10wh;
 }
 
 .start-game {
+    font-family: "Chicle";
+    font-size: 20px;
     text-decoration: none;
     background-color: transparent;
     border-color: transparent;
+    height: 15vh;
+    width: 15vw;
 }
 
 .nico-and-btn {
@@ -75,7 +93,10 @@ html {
     flex-direction: row-reverse;
     justify-content: space-between;
     position: relative;
+    align-items: flex-end;
+    z-index: 3;
 }
+
 
 
 
@@ -88,29 +109,29 @@ html {
 }
 
 .sixties {
-    font-family: "Atomic Age";
+    font-family: "Monoton";
     background: linear-gradient(-45deg, #133657, #365068, #f8f6e2, #fffce8);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
 
 .seventies {
-    font-family: "Atomic Age";
+    font-family: "Chicle";
     background: linear-gradient(-45deg, #6d4d20, #68401b, #5d664f, #4c7533);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
 
 .eighties {
-    font-family: "Atomic Age";
+    font-family: "Rock Salt";
     background: linear-gradient(-45deg, #e0caac, #e9e0d2, #fd8829, #af570e);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
 
 .ninties {
-    font-family: "Atomic Age";
-    background: linear-gradient(-45deg, #4a4469, #757091, #c9a77c, #ffe7c8);
+    font-family: "Orbitron";
+    background: linear-gradient(-45deg, #c9a77c, #ffe7c8, #4a4469, #757091);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
@@ -119,15 +140,39 @@ html {
 #game-page-2 {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #game-box-2 {
-    background-image: url('./images/50\'s\ Radio.gif');
-    background-size: 50vh;
     width: 80vw;
     height: 90vh;
     margin-top: 25px;
     position: relative;
+}
+
+.fifties-pic {
+    background-image: url('./images/50\'s\ Radio.gif');
+    background-size: 50vh;
+}
+
+.sixties-pic {
+    background-image: url('./images/60s-radio.png');
+    background-size: 50vh;
+}
+
+.seventies-pic {
+    background-image: url('./images/70s-Radio.png');
+    background-size: 45vh;
+}
+
+.eighties-pic {
+    background-image: url('./images/80s-radio.png');
+    background-size: 50vh;
+}
+
+.ninties-pic {
+    background-image: url('./images/90s-radio.png');
+    background-size: 50vh;
 }
 
 .header-2 {
@@ -136,31 +181,83 @@ html {
     flex-direction: column;
 }
 
+.header-2 h1 {
+    color: beige;
+    background-color: rgb(163, 159, 159);
+    border-radius: 8px;
+    padding: 10px;
+}
+
 .header-2 h2 {
     text-align: center;
     margin-bottom: 50px;
+    color: rgb(255, 255, 235);
+    background-color: rgb(163, 159, 159);
+    border-radius: 8px;
+    padding: 10px;
 }
 
-.choice-buttons{
+.choice-buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
+.btn {
+    font-family: "Tenali Ramakrishna";
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: beige;
+    background-color: rgb(163, 159, 159);
+    border: none;
+    border-radius: 8px;
+    padding: 0px 10px;
+}
+
 .play-replay {
     display: flex;
     justify-content: center;
-    font-family: "Atomic Age";
 }
 .life-bar {
     display: flex;
     flex-direction: column;
+    margin: 100px 0px 0px 25px;
 }
+
+.life-bar p {
+    font-family: "Tenali Ramakrishna";
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: beige;
+    background-color: rgb(163, 159, 159);
+    width: 18vw;
+    text-align: center;
+    border-radius: 8px;
+}
+
 .lives {
     display: flex;
     flex-direction: row;
 }
-#life {
+.life {
     height: 10vh;
     width: 6vw;
+}
+
+.loser-message {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    background-color: white;
+}
+
+.winner-message {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    background-color: white;
 }

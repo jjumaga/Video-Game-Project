@@ -1,7 +1,7 @@
 export const answers = [
   {
     options: [
-      " Just A Gigolo<br />Louis Prima",
+      "Just A Gigolo<br />Louis Prima",
       "Rip it Up<br />Little Richard",
       "I've Got a Woman<br/>Ray Charles",
     ],
@@ -9,7 +9,9 @@ export const answers = [
     groovySound: "./groovy.mp3",
     incorrectSound: "./error.mp3",
     song: "./50-gigolo-soundbite.mp3",
-    header: "Alright alright alright, welcome to the 60's",
+    header: "Neato! We've travelled back to the fifties!",
+    bodyClass: "fifties",
+    backgroundClass: "fifties-pic",
   },
 
   {
@@ -22,7 +24,9 @@ export const answers = [
     groovySound: "./groovy.mp3",
     incorrectSound: "./error.mp3",
     song: "./60-sinnerman-soundbite.mp3",
-    header: "Far out, we're in the 70's",
+    header: "Alright alright alright, welcome to the 60's",
+    bodyClass: "sixties",
+    backgroundClass: "sixties-pic",
   },
 
   {
@@ -35,7 +39,9 @@ export const answers = [
     groovySound: "./groovy.mp3",
     incorrectSound: "./error.mp3",
     song: "./70-layla-soundbite.mp3",
-    header: "Ya man, the 80's!",
+    header: "Far out, we're in the 70's",
+    bodyClass: "seventies",
+    backgroundClass: "seventies-pic",
   },
 
   {
@@ -48,7 +54,9 @@ export const answers = [
     groovySound: "./groovy.mp3",
     incorrectSound: "./error.mp3",
     song: "./80-blue-monday-soundbite.mp3",
-    header: "The 90's!",
+    header: "Ya man, the 80's!",
+    bodyClass: "eighties",
+    backgroundClass: "eighties-pic",
   },
 
   {
@@ -62,5 +70,7 @@ export const answers = [
     incorrectSound: "./error.mp3",
     song: "./90-juicy-soundbite.mp3",
     header: "The 90's",
+    bodyClass: "ninties",
+    backgroundClass: "ninties-pic",
   },
 ];

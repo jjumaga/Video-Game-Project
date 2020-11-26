@@ -1,6 +1,6 @@
 import { answers } from "../questions.js";
 
-let currentSlide = 1;
+let currentSlide = 0;
 
 let answerPool = document.querySelectorAll(".choice-buttons .btn");
 //choose all buttons from html and put it into an array
@@ -18,7 +18,7 @@ let btnPlayReplay = document.querySelector(".play-replay");
 btnPlayReplay.onclick = playIsClicked;
 
 let songs = document.getElementById("songbites");
-function playIsClicked(evt) {
+function playIsClicked() {
   if (btnPlayReplay.innerHTML === "Play") {
     btnPlayReplay.innerHTML = "Replay";
   }
@@ -28,58 +28,75 @@ function playIsClicked(evt) {
 }
 
 /*const answerBtns = document.querySelectorAll(".choice-buttons .btn");
-  answerBtns.forEach((btn) => ());*/
+  answerBtns.forEach((btn) => {
+    btn.onclick = handleAnswer;
+  };*/
 
 function handleAnswer(evt) {
   const whichButton = Number(evt.target.getAttribute("data-answer"));
   if (whichButton === answers[currentSlide].correctAnswer) {
     correctAnswer();
-    currentSlide++;
   } else {
     wrongAnswer();
   }
 }
 
-//const endOfGame = prompt("You won!");
 let correctSound = document.querySelector("#first-button .groovy-voice");
 let headerContent = document.querySelector("#welcome .headers");
+let bodyClasses = document.getElementById("body-page");
+let backgroundPic = document.getElementById("game-box-2");
+
 function correctAnswer() {
   correctSound.src = answers[currentSlide].groovySound;
   correctSound.play();
   btnPlayReplay.innerHTML = "Play";
+  currentSlide++;
   headerContent.innerHTML = answers[currentSlide].header;
-  answerPool.innerHTML = answers[currentSlide].options;
-  console.log(answerPool.innerHTML);
-  //endOfGame;
+  songs.src = answers[currentSlide].song;
+  bodyClasses.classList.remove(answers[currentSlide - 1].bodyClass);
+  bodyClasses.classList.add(answers[currentSlide].bodyClass);
+  backgroundPic.classList.remove(answers[currentSlide - 1].backgroundClass);
+  backgroundPic.classList.add(answers[currentSlide].backgroundClass);
+  answerPool.forEach((btn, index) => {
+    btn.innerHTML = answers[currentSlide].options[index];
+    let nblife = document.querySelectorAll(".life").length;
+    if (nblife === 0) {
+      setInterval(() => (loserPopup.style.display = "inline"), 500);
+    }
+  });
+  //you won
   //changes css
-  //change .header-2 h1
 }
 
+/*var element = document.getElementById("myDIV");
+  element.classList.remove("mystyle");*/
+
 let wrongSound = document.querySelector("#second-button .error");
-let lifeOne = document.querySelector(".life-1");
-let lifeTwo = document.querySelector("life-2");
-let lifeThree = document.querySelector("life-3");
+let lives = document.querySelector(".lives");
+console.log(typeof lives);
+let loserPopup = document.querySelector(".loser-message");
+let lifeVinyls = document.querySelectorAll(".life");
 
 function wrongAnswer() {
   wrongSound.src = answers[currentSlide].incorrectSound;
   wrongSound.play();
-  /*lifeOne.remove();
-if (!lifeOne) {
-    lifeTwo.remove();
-} else (!lifeOne && !lifeTwo) {
-    lifeThree.remove();
-}*/
-  //takes away one life
-  //
+  lives.removeChild(lives.lastElementChild);
+  let nblife = document.querySelectorAll(".life").length;
+  if (nblife === 0) {
+    setInterval(() => (loserPopup.style.display = "inline"), 500);
+  }
+  //if (lives.contains(lifeVinyls) === false);
 }
-currentSlide++;
+
+var audio = new Audio(
+  "./Video-Game-Project/far-out-traveller/mp3-files/careless-whispers.mp3"
+);
+audio.play();
 
 //As a result, we can simply access that image using
 //the getElementById() method and then change the display value to
 //“none”. By setting the display value to “none”, we are
 //essentially hiding the image from view.
-
-//new Audio('<url>').play()
 
 //let currentSound = answer[currentSlide].sound //i need to call this when my slide changes
 //buttonOne.textContent = answerPool[currentSlide];
@@ -88,7 +105,6 @@ currentSlide++;
 // currentAnswerIndex++
 
 // plan all the steps as functions
-
 // playsound
 // listenClicks
 // check
