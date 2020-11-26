@@ -30,7 +30,6 @@ html {
     position: relative;
     margin-top: 25px;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     
@@ -51,21 +50,30 @@ html {
 .header-1 {
     display: flex;
     justify-content: center;
-    font-size: 35px;
     position: relative;
-    z-index: 1;
+    font-size: 35px;
 }
 #game-name {
     margin-bottom: 30px;
+    position: fixed;
 }
 
 .game-description {
-    width: 55vw;
+    width: 60vw;
     text-align: end;
-    padding:0;
-    position: relative;
+    padding-top: 150px;
+    position: fixed;
     z-index: 2;
 
+}
+
+.nico-and-btn {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: flex-end;
+    width: 70vw;
+    height: 75vh;
 }
 
 #nico {
@@ -76,26 +84,20 @@ html {
 .game-link {
     height: 10vh;
     width: 10wh;
+    z-index: 2;
 }
 
 .start-game {
     font-family: "Chicle";
-    font-size: 20px;
+    font-size: 25px;
     text-decoration: none;
     background-color: transparent;
     border-color: transparent;
     height: 15vh;
     width: 15vw;
+    cursor: pointer;
 }
 
-.nico-and-btn {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    position: relative;
-    align-items: flex-end;
-    z-index: 3;
-}
 
 
 
@@ -110,6 +112,7 @@ html {
 
 .sixties {
     font-family: "Monoton";
+    font-size: 15px;
     background: linear-gradient(-45deg, #133657, #365068, #f8f6e2, #fffce8);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -117,6 +120,7 @@ html {
 
 .seventies {
     font-family: "Chicle";
+    font-size: 18px;
     background: linear-gradient(-45deg, #6d4d20, #68401b, #5d664f, #4c7533);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -124,6 +128,7 @@ html {
 
 .eighties {
     font-family: "Rock Salt";
+    font-size: 11px;
     background: linear-gradient(-45deg, #e0caac, #e9e0d2, #fd8829, #af570e);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -131,6 +136,7 @@ html {
 
 .ninties {
     font-family: "Orbitron";
+    font-size: 18px;
     background: linear-gradient(-45deg, #c9a77c, #ffe7c8, #4a4469, #757091);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -141,6 +147,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: auto;
 }
 
 #game-box-2 {
@@ -148,11 +155,13 @@ html {
     height: 90vh;
     margin-top: 25px;
     position: relative;
+    z-index: auto;
 }
 
 .fifties-pic {
     background-image: url('./images/50\'s\ Radio.gif');
     background-size: 50vh;
+    z-index: auto;
 }
 
 .sixties-pic {
@@ -186,6 +195,7 @@ html {
     background-color: rgb(163, 159, 159);
     border-radius: 8px;
     padding: 10px;
+    z-index: auto;
 }
 
 .header-2 h2 {
@@ -195,12 +205,21 @@ html {
     background-color: rgb(163, 159, 159);
     border-radius: 8px;
     padding: 10px;
+    z-index: auto;
 }
 
 .choice-buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    z-index: auto;
+}
+
+.play-song {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    z-index: auto;
 }
 
 .btn {
@@ -212,16 +231,27 @@ html {
     border: none;
     border-radius: 8px;
     padding: 0px 10px;
+    outline: none;
+    width: 20vw;
+    cursor: pointer;
+    z-index: auto;
 }
 
 .play-replay {
     display: flex;
     justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    width: 10vw;
+    cursor: pointer;
+    z-index: auto;
 }
 .life-bar {
     display: flex;
     flex-direction: column;
-    margin: 100px 0px 0px 25px;
+    margin: 40px 0px 0px 25px;
+    z-index: auto;
 }
 
 .life-bar p {
@@ -233,31 +263,74 @@ html {
     width: 18vw;
     text-align: center;
     border-radius: 8px;
+    z-index: auto;
 }
 
 .lives {
     display: flex;
     flex-direction: row;
+    z-index: auto;
 }
 .life {
     height: 10vh;
-    width: 6vw;
+    width: 5vw;
+    margin: 0px, 55px;
+    z-index: auto;
+}
+
+#body-page {
+    position: relative;
+    z-index: auto;
+}
+
+.win-lose-popups {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 40vw;
+    margin-top: 175px;
+    margin-left: 425px;
+    z-index: 1;
 }
 
 .loser-message {
-    position: absolute;
+    font-family: "Chicle";
+    font-size: 25px;
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
-    display: none;
-    background-color: white;
+    justify-content: center;
+    opacity: 0;
+    background-color: #db915f;
+    border-radius: 8px;
+    padding: 50px;
+    z-index: 1;
 }
 
 .winner-message {
-    position: absolute;
+    font-family: "Chicle";
+    font-size: 25px;
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
-    display: none;
-    background-color: white;
+    justify-content: center;
+    opacity : 0;
+    background-color: #db915f;
+    border-radius: 8px;
+    padding: 50px;
+    z-index: 1;
+}
+
+.homepage {
+    color: beige;
+    background-color: rgb(163, 159, 159);
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-family: "Chicle";
+    font-size: 25px;
+    margin-top: 25px;
 }

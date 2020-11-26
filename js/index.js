@@ -36,6 +36,11 @@ function handleAnswer(evt) {
   const whichButton = Number(evt.target.getAttribute("data-answer"));
   if (whichButton === answers[currentSlide].correctAnswer) {
     correctAnswer();
+    /*} else if (
+    currentSlide === 4 &&
+    whichButton === answers[currentSlide].correctAnswer
+  ) {
+    setInterval(() => (winnerPopup.style.opacity = "1"), 500);*/
   } else {
     wrongAnswer();
   }
@@ -45,6 +50,7 @@ let correctSound = document.querySelector("#first-button .groovy-voice");
 let headerContent = document.querySelector("#welcome .headers");
 let bodyClasses = document.getElementById("body-page");
 let backgroundPic = document.getElementById("game-box-2");
+let winnerPopup = document.querySelector(".winner-message");
 
 function correctAnswer() {
   correctSound.src = answers[currentSlide].groovySound;
@@ -59,23 +65,16 @@ function correctAnswer() {
   backgroundPic.classList.add(answers[currentSlide].backgroundClass);
   answerPool.forEach((btn, index) => {
     btn.innerHTML = answers[currentSlide].options[index];
-    let nblife = document.querySelectorAll(".life").length;
-    if (nblife === 0) {
-      setInterval(() => (loserPopup.style.display = "inline"), 500);
+    if (currentSlide === 5) {
+      setInterval(() => (winnerPopup.style.opacity = "1"), 500);
     }
   });
-  //you won
-  //changes css
 }
-
-/*var element = document.getElementById("myDIV");
-  element.classList.remove("mystyle");*/
 
 let wrongSound = document.querySelector("#second-button .error");
 let lives = document.querySelector(".lives");
 console.log(typeof lives);
 let loserPopup = document.querySelector(".loser-message");
-let lifeVinyls = document.querySelectorAll(".life");
 
 function wrongAnswer() {
   wrongSound.src = answers[currentSlide].incorrectSound;
@@ -83,9 +82,8 @@ function wrongAnswer() {
   lives.removeChild(lives.lastElementChild);
   let nblife = document.querySelectorAll(".life").length;
   if (nblife === 0) {
-    setInterval(() => (loserPopup.style.display = "inline"), 500);
+    setInterval(() => (loserPopup.style.opacity = "1"), 500);
   }
-  //if (lives.contains(lifeVinyls) === false);
 }
 
 var audio = new Audio(

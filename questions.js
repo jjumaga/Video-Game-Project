@@ -73,4 +73,19 @@ export const answers = [
     bodyClass: "ninties",
     backgroundClass: "ninties-pic",
   },
+
+  {
+    options: [
+      "Juicy<br>The Notorious B.I.G.",
+      "It Was a Good Day<br>Ice Cube",
+      "Changes<br>2Pac",
+    ],
+    correctAnswer: 0,
+    groovySound: "./groovy.mp3",
+    incorrectSound: "./error.mp3",
+    song: "./90-juicy-soundbite.mp3",
+    header: "The 90's",
+    bodyClass: "ninties",
+    backgroundClass: "ninties-pic",
+  },
 ];
