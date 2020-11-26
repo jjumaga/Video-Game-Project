@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" <script type="module" src="./js/index.js"></script>
+    <title>Far Out Traveller</title>
+  </head>
+
+
+
+  <body class="fifties">
+
+    <div id="game-page-2">
+      <div id="game-box-2">
+        <div id="welcome">
+          <div class="header-2">
+            <h1 class="headers">Neato! We've made it to the 50's!</h1>
+            <h2>
+              Click play to listen to the song, then choose the matching<br />
+              song name and artist before the time runs out
+            </h2>
+          </div>
+          
+
+        <section class="choice-buttons">
+          <div id="first-button">
+            <audio class="groovy-voice" src="./groovy.mp3" type="audio/mpeg"></audio>
+            <button data-answer="0" class="btn"></button>
+          </div>
+
+          <div id="second-button">
+            <audio class="error" src="./error.mp3" type="audio/mpeg"></audio>
+            <button data-answer="1" class="btn"></button>
+          </div>
+
+          <div id="third-button">
+            <audio class="error" src="./error.mp3" type="audio/mpeg"></audio>
+            <button data-answer="2" class="btn"></button>
+          </div>
+        </section>
+
+
+          <div class="play-song">
+            <audio id="songbites" src="./50-gigolo-soundbite.mp3" type="audio/mpeg"></audio>
+            <button class="btn play-replay">Play</button>
+          </div>
+
+
+
+            <div class="life-bar">
+              <p>Groovy tries remaining;</p>
+            <div class="lives">
+              <img id="life" class="life-1" src="./images/record.png" alt="record" />
+              <img id="life" class="life-2" src="./images/record.png" alt="record" />
+              <img id="life" class="life-3" src="./images/record.png" alt="record" />
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap');
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#index {
+    font-family: "Chicle";
+    background: linear-gradient(-45deg, #d16425, #e2772f, #da8536, #db8331);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+#game-page-1 {
+    display: flex;
+    justify-content: center;
+}
+
+#game-box-1 {
+    background: linear-gradient(-45deg, #db8331, #da8536, #e2772f, #d16425);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    width: 80vw;
+    height: 90vh;
+    position: relative;
+    margin-top: 25px;
+    
+}
+
+@keyframes gradient {
+    0% {
+    background-position: 0% 50%;
+    }
+    50% {
+    background-position: 100% 50%;
+    }
+    100% {
+    background-position: 0% 50%;
+    }
+}
+
+.header-1 {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+#game-name {
+    margin-bottom: 30px;
+}
+
+.game-description {
+    width: 55vw;
+    text-align: end;
+    padding:0;
+    position: relative;
+
+}
+
+#nico {
+    width: 30vw;
+    height: 60vh;
+    
+}
+
+.start-game {
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.nico-and-btn {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+
+
+.fifties {
+    font-family: "Atomic Age";
+    background: linear-gradient(-45deg, #80dbdf, #cdecee, #a14639, #7e564c);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+.sixties {
+    font-family: "Atomic Age";
+    background: linear-gradient(-45deg, #133657, #365068, #f8f6e2, #fffce8);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+.seventies {
+    font-family: "Atomic Age";
+    background: linear-gradient(-45deg, #6d4d20, #68401b, #5d664f, #4c7533);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+.eighties {
+    font-family: "Atomic Age";
+    background: linear-gradient(-45deg, #e0caac, #e9e0d2, #fd8829, #af570e);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+.ninties {
+    font-family: "Atomic Age";
+    background: linear-gradient(-45deg, #4a4469, #757091, #c9a77c, #ffe7c8);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+
+#game-page-2 {
+    display: flex;
+    justify-content: center;
+}
+
+#game-box-2 {
+    background-image: url('./images/50\'s\ Radio.gif');
+    background-size: 50vh;
+    width: 80vw;
+    height: 90vh;
+    margin-top: 25px;
+    position: relative;
+}
+
+.header-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-2 h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.choice-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.play-replay {
+    display: flex;
+    justify-content: center;
+    font-family: "Atomic Age";
+}
+.life-bar {
+    display: flex;
+    flex-direction: column;
+}
+.lives {
+    display: flex;
+    flex-direction: row;
+}
+#life {
+    height: 10vh;
+    width: 6vw;
+}
