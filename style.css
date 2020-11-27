@@ -160,7 +160,7 @@ html {
 }
 
 .fifties-pic {
-    background-image: url('./images/50\'s\ Radio.gif');
+    background-image: url('./images/50\'s\ radio.gif');
     background-size: 50vh;
     z-index: auto;
 }
@@ -171,7 +171,7 @@ html {
 }
 
 .seventies-pic {
-    background-image: url('./images/70s-Radio.png');
+    background-image: url('./images/70s-radio.png');
     background-size: 45vh;
 }
 
