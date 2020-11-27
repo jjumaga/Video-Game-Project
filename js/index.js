@@ -66,7 +66,7 @@ function correctAnswer() {
   answerPool.forEach((btn, index) => {
     btn.innerHTML = answers[currentSlide].options[index];
     if (currentSlide === 5) {
-      setInterval(() => (winnerPopup.style.opacity = "1"), 500);
+      setInterval(() => (winnerPopup.style.display = "flex"), 500);
     }
   });
 }
@@ -82,40 +82,12 @@ function wrongAnswer() {
   lives.removeChild(lives.lastElementChild);
   let nblife = document.querySelectorAll(".life").length;
   if (nblife === 0) {
-    setInterval(() => (loserPopup.style.opacity = "1"), 500);
+    setInterval(() => (loserPopup.style.display = "flex"), 500);
   }
 }
 
-var audio = new Audio(
-  "./Video-Game-Project/far-out-traveller/mp3-files/careless-whispers.mp3"
-);
-audio.play();
-
-//As a result, we can simply access that image using
-//the getElementById() method and then change the display value to
-//“none”. By setting the display value to “none”, we are
-//essentially hiding the image from view.
-
-//let currentSound = answer[currentSlide].sound //i need to call this when my slide changes
-//buttonOne.textContent = answerPool[currentSlide];
-
-// when done ..
-// currentAnswerIndex++
-
-// plan all the steps as functions
-// playsound
-// listenClicks
-// check
-// display question(index)
-// remove life
-
-//default is fifties
-//play button - onclick plays mp3
-//if inner.html = 'play', innerhtml = replay
-//listenclicks to options
-//how does computer know what button has been clicked
-//if clicked button.index == 0, launch correct button function
-//else launch incorrect button function
-
-//correct button function
-//plays mp3 "groovy" and "careless whisper" at the same time?
+/*window.addEventListener("DOMContentLoaded", (event) => {
+  const backgroundMus = document.getElementById("background-music");
+  backgroundMus.volume = 0.1;
+  backgroundMus.play();
+});*/
