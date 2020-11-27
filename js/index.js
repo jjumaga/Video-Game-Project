@@ -86,8 +86,8 @@ function wrongAnswer() {
   }
 }
 
-/*window.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("DOMContentLoaded", (event) => {
   const backgroundMus = document.getElementById("background-music");
   backgroundMus.volume = 0.1;
   backgroundMus.play();
-});*/
+});
